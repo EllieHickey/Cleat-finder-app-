@@ -6,43 +6,41 @@
 	<meta name="viewport" content="width=device-width">
 	<title>replit</title>
 	<link href="style.css" rel="stylesheet" type="text/css" />
+  
 </head>
 
 <body>
-	<header>
-		<h1>Museum Ticket Generator</h1>
-		<p>Enter your information below to calculate your ticket price and print your ticket.</p>
-	</header>
-
 	<center>
-		<label>Day: </label>
-    <select id="day">
-      <option value="Monday">monday</option>
-      <option value="Tuesday">tuesday</option>
-      <option value="Wednesday">wednesday</option>
-      <option value="Thursday">thursday</option>
-      <option value="Friday">friday</option>
-      <option value="Saturday">saturday</option>
-      <option value="Sunday">sunday</option>
-    </select>
-    <br>
-    <br>
 
-    <label>Age: </label>
-    <input type="text" id="age"><br><br>
-      
-    <label>Discount Code: </label>
-    <input type="text" id="discount"><br><br>
+        <!-- text for header -->
+		<header>What Soccer Cleats Should I Get?</header>
 
-    <button onclick="getTicket()">Create My Ticket!</button>
+		
+<!-- options for buttons. Here it is price range -->
+  <select onchange="getCleats()" id="priceRange" >
+    <option value="price range">Price range?</option>
+    <option value="$150+">$150+</option>
+    <option value="-$150">-$150</option>
+   
 
-    <div class="outputBox">
-      <h2>Admit One</h2>
-  	  <img width="20%"src="qr.png">
-		  <p id="output"> </p>
-	  </div>
+  </select>
+<!-- options for buttons. Here it is the brand -->
+<select onchange="getCleats()" id="brand" >
+    <option value="brand">What brand?</option>
+    <option value="Nike">Nike</option>
+    <option value="Adidas">Adidas</option>
+    <option value="Neither">Neither</option>
+</select>
 
-  </center>
+   </select>
+
+
+  </select>
+<br>
+  
+  
     <script src="script.js"></script>
+  
+ 
   </body>
 </html>
