@@ -15,6 +15,7 @@ else if (priceRange == "$150+" && brand=="nike"){
     console.log ("Nike Mecurials are the best option")
 }
 else if (priceRange== "-$150" && brand == "nike" ){
+      document.getElementById("feedback").innerHTML = "Nike Tiempos are the best option";
  console.log ("Nike Tiempos are the best option")
 }
 else if (priceRange== "-$150" && brand == "adidas" ){
