@@ -1,3 +1,4 @@
+//function to take inpust from the user and turn it into a useable result
 function getCleats(brand, priceRange){
 
     //first, get the user inputs from the text boxes and save them to variables.
@@ -6,30 +7,52 @@ function getCleats(brand, priceRange){
     
     var brand = document.getElementById ("brand").value;
     console.log (brand);
-    
+    //if statement saying if the user selects neither no matter what we cant help
+    //boolean
 if (brand== "neither"){
-    document.getElementById("feedback").innerHTML = "sorry we cannot help you"
+    //displaying message on screen by sending the information into the innerHTML. The information in quotations is what will show up on screen
+    document.getElementById("feedback").innerHTML = "Sorry we cannot help you."
+    //console.log to comfirm its working
     console.log ("sorry we cannot help you")
+    //calling the function at the bottom
+    //element is = the returned function
+     document.getElementById("image").src = showImage("Can't help");
 }
-
+//else if statment if "neither" isnt selected that says if the price selected is over $150 and the brand is nike the commands in the boolean expression will run
 else if (priceRange == "$150+" && brand=="nike"){
-     document.getElementById("feedback").innerHTML = "Nike Mecurials are the best option"
+     //displaying message on screen by sending the information into the innerHTML. The information in quotations is what will show up on screen
+     document.getElementById("feedback").innerHTML = "Nike Mecurials are the best option."
+     //console.log to confirm its working
     console.log ("Nike Mecurials are the best option")
+     //calling the function at the bottom
+    //element is = the returned function
     document.getElementById("image").src = showImage("nikeMecurials");
 }
 else if (priceRange== "-$150" && brand == "nike" ){
-      document.getElementById("feedback").innerHTML = "Nike Tiempos are the best option";
- console.log ("Nike Tiempos are the best option")
- document.getElementById("image").src = showImage("nikeTiempos");
+     //displaying message on screen by sending the information into the innerHTML. The information in quotations is what will show up on screen
+      document.getElementById("feedback").innerHTML = "Nike Tiempos are the best option.";
+      //console.log to confirm its working
+         console.log ("Nike Tiempos are the best option")
+      //calling the function at the bottom
+    //element is = the returned function
+     document.getElementById("image").src = showImage("nikeTiempos");
 }
 else if (priceRange== "-$150" && brand == "adidas" ){
-        document.getElementById("feedback").innerHTML = "Adidas Adizeros are the best option"
- console.log ("Adidas Adizeros are the best option")
+    //displaying message on screen by sending the information into the innerHTML. The information in quotations is what will show up on screen
+ document.getElementById("feedback").innerHTML = "Adidas Adizeros are the best option."
+    //console.log to confirm its working
+         console.log ("Adidas Adizeros are the best option")
+        //calling the function at the bottom
+        //element is = the returned function
  document.getElementById("image").src = showImage("adidasAdizeros");
 }
 else if (priceRange== "$150+" && brand == "adidas" ){
-     document.getElementById("feedback").innerHTML = "Adidas Predators are the best option"
- console.log ("Adidas Predators are the best option")
+    //displaying message on screen by sending the information into the innerHTML. The information in quotations is what will show up on screen
+ document.getElementById("feedback").innerHTML = "Adidas Predators are the best option."
+     //console.log to confirm its working
+        console.log ("Adidas Predators are the best option")
+         //calling the function at the bottom
+        //element is = the returned function
   document.getElementById("image").src = showImage("Adidas");
 
 }
@@ -38,6 +61,7 @@ else if (priceRange== "$150+" && brand == "adidas" ){
 
 
 function showImage(result){
+    //assigns an input to the result and then returns the image adress where it will be called in function getCleats.
     if(result == "Adidas"){
          return "https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/47c9a4273d5e4cbc918d165dc2414a8f_9366/Predator_Elite_Firm_Ground_Cleats_Orange_JI1083_HM1.jpg"
     }
@@ -49,5 +73,8 @@ function showImage(result){
     }
     else if (result == "nikeMecurials"){
         return "https://image.goat.com/transform/v1/attachments/product_template_pictures/images/112/210/362/original/HV8859_100.png.png?action=crop&width=900"
+}
+    else if (result == "Can't help"){
+        return "https://images.genius.com/ddab64aa5e55030c98e4979aef0bea20.1000x1000x1.png"
 }
 }
